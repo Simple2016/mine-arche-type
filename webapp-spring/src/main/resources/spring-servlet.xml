@@ -48,5 +48,13 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
         <property name="maxInMemorySize" value="40960"></property>
     </bean>
 
+
+    <mvc:interceptors>
+        <!-- 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 -->
+        <bean class="com.liqw.maven.archetypes.interceptor.LogInterceptor">
+
+        </bean>
+    </mvc:interceptors>
+
 </beans>
 
